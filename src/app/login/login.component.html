@@ -1,10 +1,20 @@
 
-<h2>Login</h2>
 <div class="container">
+<h2>Login</h2>
 	<div class="form-container">
-	   <span class="error" *ngIf="error">{{ error }}</span>
-	  <button routerLink="/email" id="email">Email</button>
+	  <span class="error" *ngIf="error">{{ error }}</span>
+	  	<div class="row">
+		  	<div class="col-sm-8">
+			  <button routerLink="/email" id="email" class="btn-primary">Email</button>
+			  <button id="fb" class="btn-disabled"><i class="fa fa-facebook"></i></button>
+			  <button id="fb" class="btn-disabled"><i class="fa fa-google"></i></button>
+			</div>
+		</div>
 
-	  <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+		<div class="row">
+		  	<div class="col-sm-6">
+		  <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+		  	</div>
+		</div>
 	</div>
 </div>
