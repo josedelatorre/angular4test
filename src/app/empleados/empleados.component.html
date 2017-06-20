@@ -1,0 +1,21 @@
+<menu></menu>
+<h1>{{titulo}}</h1>
+<!---
+<ul>
+	<li *ngIf="empleados[0].externo">Empleado estrella: {{empleados[0]}}</li>
+	<li *ngIf="empleados[1].externo">Empleado normalito: {{empleados[1]}}</li>
+</ul>
+<button (click)="cambiarExterno()">Cambiar externo</button>
+-->
+<ul>
+	<li *ngFor="let e of empleados; let n = index ">
+	<h3>Empleado {{n+1}}</h3>
+		<ul [ngStyle]="{background :e.color}">
+			<li>Nombre: {{e.nombre}}</li>
+			<li>Edad: {{e.edad}}</li>
+			<li>Cargo: {{e.cargo}}</li>
+			<li *ngIf="e.externo">No está contratado</li>
+			<li *ngIf="!e.externo">Está contratado</li>
+		</ul>
+	</li>
+</ul>

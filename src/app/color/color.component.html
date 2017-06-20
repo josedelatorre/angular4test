@@ -1,0 +1,10 @@
+<menu></menu>
+<div [ngStyle]="{'background':fondo}" [style.color]="letra" [ngClass]="{
+	letraGrande : grande
+}">
+<!--[ngClass] { cssClass : condition , ... }-->
+	<h3>Color component</h3>
+	<label>Color de fondo: </label><input type="text" [(ngModel)]="fondo" /> <br>
+	<label>Color de letra: </label><input type="text" [(ngModel)]="letra" /><br>
+	<label>Letra grande: </label><input type="checkbox" [(ngModel)]="grande" /><br>
+</div>
