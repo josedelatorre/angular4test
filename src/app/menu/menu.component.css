@@ -2,3 +2,8 @@ nav {
 	margin-left: -2.5em;
 	padding:1.5em;
 }
+
+.right {
+	justify-content: space-between;
+	text-align: right; 
+}
