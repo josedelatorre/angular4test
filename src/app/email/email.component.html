@@ -8,15 +8,15 @@
 	 
 	    <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
 
-	    <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
-		<div class="row">
+	    <form #formData='ngForm' (ngSubmit)="onSubmit(formData)" class="form-group">
+		<div class="form-horizontal">
 	      <input type="text" placeholder="Email address.." (ngModel)="email" name="email" class="txt" required>
 	      <input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
 		</div>
-		 <div class="row">
+		 <div class="form-horizontal">
 		      <button type="submit" [disabled]="!formData.valid" class="btn-primary">Log in</button>
 		 </div>
-		 <div class="row">
+		 <div class="form-control-static">
 		      <a routerLink="/signup" class="alc">Don't have an account?</a>
 	     </div>
 	  </form>

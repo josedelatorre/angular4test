@@ -31,6 +31,7 @@ import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
 
 import { AuthGuard } from './auth.service';
+import { LoginService } from './login/login.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const firebaseConfig = {
@@ -56,7 +57,7 @@ export const firebaseConfig = {
     HttpModule,
     BrowserAnimationsModule
   ],
-  providers: [appRoutingProviders, AuthGuard],
+  providers: [appRoutingProviders, AuthGuard, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

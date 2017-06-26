@@ -22,13 +22,14 @@ export class RopaService {
   }
 
   delete(id){
-  	var elem = this.prendas.filter(function( obj ) {
-	  return obj.id == id;
-	});
-	if(elem.length > 0){
-		var index = this.prendas.indexOf(elem[0]);
-		this.prendas.splice(index,1);
-	}
+			var elem = this.prendas.filter(function( obj ) {
+					return obj.id == id;
+				});
+
+			if(elem.length > 0){
+				var index = this.prendas.indexOf(elem[0]);
+				this.prendas.splice(index,1);
+			}
   }
 
 }

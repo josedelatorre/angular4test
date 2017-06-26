@@ -3,6 +3,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
 import { moveIn, fallIn } from '../router.animations';
+import { LoginService } from '../login/login.service'
 
 import { Observable } from 'rxjs/Observable';
 
@@ -18,26 +19,24 @@ export class EmailComponent  {
     state: string = '';
     error: any;
     user: Observable<firebase.User>;
+    public email;
 
-    constructor(public afAuth: AngularFireAuth,private router: Router) {
-      this.afAuth.authState.subscribe(auth => { 
-        if(auth) {
-          this.router.navigateByUrl('/home');
-        }
-      });
+    constructor(public afAuth: AngularFireAuth,
+    private router: Router, 
+    private loginService: LoginService) {
     }
 
 
   onSubmit(formData) {
     if(formData.valid) {
 
-      let email =  formData.value.email
+      this.email =  formData.value.email
       let password = formData.value.password
 
-      this.afAuth.auth.signInWithEmailAndPassword(email, password).then(
+      this.afAuth.auth.signInWithEmailAndPassword(this.email, password).then(
         (success) => {
-        console.log(success);
-        this.router.navigate(['/home']);
+          this.loginService.setUser(this.email)
+          this.router.navigate(['/home']);
       }).catch(
         (err) => {
         console.log(err);

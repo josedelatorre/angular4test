@@ -15,11 +15,11 @@ export class LoginComponent  {
 
   	constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase ,private router: Router) {
 
-		    this.afAuth.authState.subscribe(auth => { 
+		   /* this.afAuth.authState.subscribe(auth => { 
 		      if(auth) {
-		        this.router.navigateByUrl('/home');
+		        this.router.navigateByUrl('/contact');
 		      }
-	    });
+	    });*/
 
   	}
 
