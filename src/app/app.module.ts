@@ -33,6 +33,7 @@ import { EmailComponent } from './email/email.component';
 import { AuthGuard } from './auth.service';
 import { LoginService } from './login/login.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CochesComponent } from './coches/coches.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDwS5Pjc5S9EJMx4GR_VLYfYiy-09p6GtI",
@@ -46,7 +47,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent, FrutaComponent, EmpleadosComponent, ColorComponent, 
-    ErrorComponent, HomeComponent, ContactComponent, MenuComponent, LoginComponent, SignupComponent, EmailComponent
+    ErrorComponent, HomeComponent, ContactComponent, MenuComponent, LoginComponent, SignupComponent, EmailComponent, CochesComponent
   ],
   imports: [
     BrowserModule, FormsModule, routing, 

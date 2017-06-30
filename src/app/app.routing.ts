@@ -9,6 +9,7 @@ import { EmailComponent } from './email/email.component'
 import { SignupComponent } from './signup/signup.component'
 import { ContactComponent } from './contact/contact/contact.component'
 import { LoginComponent } from './login/login.component'
+import { CochesComponent } from './coches/coches.component'
 import { AuthGuard } from './auth.service';
 
 const appRoutes : Routes = [
@@ -19,6 +20,7 @@ const appRoutes : Routes = [
 	{path: 'color', component: ColorComponent, canActivate: [AuthGuard]},
 	{path: 'login', component: LoginComponent},
 	{path: 'email', component: EmailComponent},
+	{path: 'coches', component: CochesComponent, canActivate: [AuthGuard]},
 	{path: 'signup', component: SignupComponent},
 	{path: 'contact', component: ContactComponent, canActivate: [AuthGuard]},
 	{path: 'contact/:param', component: ContactComponent, canActivate: [AuthGuard]},
