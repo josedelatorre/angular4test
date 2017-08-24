@@ -47,7 +47,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent, FrutaComponent, EmpleadosComponent, ColorComponent, 
-    ErrorComponent, HomeComponent, ContactComponent, MenuComponent, LoginComponent, SignupComponent, EmailComponent, CochesComponent
+    ErrorComponent, HomeComponent, ContactComponent, MenuComponent, LoginComponent, 
+    SignupComponent, EmailComponent, CochesComponent
   ],
   imports: [
     BrowserModule, FormsModule, routing, 
